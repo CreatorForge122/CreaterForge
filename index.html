@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CreatorForge — Free Tools for Modern Creators</title>
+<meta name="description" content="Free creator tools for YouTube, Shorts, gaming and social media. Generate ideas, hooks, titles, captions, hashtags and scripts instantly.">
+<meta name="theme-color" content="#08090d">
+<style>
+:root{--bg:#07080c;--surface:#0d1017;--surface2:#121620;--line:#202633;--text:#f7f8fb;--muted:#9299aa;--purple:#8b5cf6;--cyan:#22d3ee;--pink:#ec4899;--green:#4ade80}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(900px 500px at 15% -10%,#39206e55,transparent 60%),radial-gradient(800px 500px at 100% 10%,#08778a33,transparent 60%),var(--bg)}button,input,textarea,select{font:inherit}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:30;height:70px;border-bottom:1px solid #ffffff0c;background:#07080ce8;backdrop-filter:blur(20px)}.navin{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:950;letter-spacing:-.8px;font-size:21px}.brand i{font-style:normal;color:var(--cyan)}.navlinks{display:flex;gap:25px}.navlinks a{font-size:14px;color:#b9bfcc;text-decoration:none}.navlinks a:hover{color:#fff}.navcta{border:1px solid #ffffff18;background:#ffffff09;color:#fff;padding:9px 13px;border-radius:10px}
+.hero{text-align:center;padding:82px 0 55px}.badge{display:inline-flex;gap:7px;align-items:center;border:1px solid #ffffff14;background:#ffffff08;padding:7px 12px;border-radius:999px;color:#cfc6ff;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}h1{font-size:clamp(45px,8vw,78px);line-height:.98;letter-spacing:-4.5px;margin:21px auto 18px;max-width:900px}.grad{background:linear-gradient(100deg,#fff 10%,#a78bfa 48%,#67e8f9 85%);color:transparent;background-clip:text;-webkit-background-clip:text}.hero p{max-width:670px;margin:auto;color:var(--muted);font-size:17px;line-height:1.65}.heroactions{display:flex;justify-content:center;gap:10px;margin-top:27px}.btn{border:1px solid #ffffff16;background:#ffffff08;color:#fff;padding:12px 17px;border-radius:11px;text-decoration:none}.btn.primary{border:0;background:linear-gradient(100deg,var(--purple),#0891b2);font-weight:800}.stats{display:flex;justify-content:center;gap:30px;margin-top:27px;color:#8f97a7;font-size:12px}.stats b{color:#e8eaf0}
+.section{padding:48px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}.section h2{margin:0;font-size:28px;letter-spacing:-1px}.section p{margin:7px 0 0;color:var(--muted)}.search{width:280px}.search input{width:100%;background:#ffffff07;border:1px solid var(--line);color:#fff;padding:11px 13px;border-radius:11px;outline:none}.search input:focus{border-color:#8b5cf677}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.tool{position:relative;overflow:hidden;background:linear-gradient(145deg,#11151d,#0b0d12);border:1px solid var(--line);border-radius:17px;padding:19px;min-height:185px;transition:.22s}.tool:before{content:"";position:absolute;width:110px;height:110px;background:#8b5cf612;filter:blur(25px);right:-50px;top:-50px}.tool:hover{transform:translateY(-5px);border-color:#ffffff28;box-shadow:0 18px 50px #0008}.icon{font-size:26px}.tool h3{margin:13px 0 7px;font-size:17px}.tool p{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 15px}.tool button{position:absolute;bottom:17px;left:19px;right:19px;border:1px solid #ffffff12;background:#ffffff08;color:#fff;border-radius:9px;padding:9px}.tool button:hover{background:#ffffff13}
+.builder{background:linear-gradient(145deg,#10131b,#0b0d13);border:1px solid var(--line);border-radius:22px;padding:25px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;color:#9ca3b2;font-size:12px;margin-bottom:7px}.field input,.field textarea,.field select{width:100%;background:#080a0e;border:1px solid #252b37;color:#fff;border-radius:10px;padding:12px;outline:none}.field textarea{min-height:130px;resize:vertical}.wide{grid-column:1/-1}.generate{margin-top:15px;border:0;color:#fff;font-weight:850;background:linear-gradient(100deg,var(--purple),#0891b2);border-radius:10px;padding:12px 19px}.results{display:grid;gap:9px;margin-top:19px}.result{display:flex;gap:12px;align-items:center;justify-content:space-between;background:#ffffff06;border:1px solid #ffffff10;padding:13px;border-radius:10px}.result span{white-space:pre-line;line-height:1.5}.copy{flex:none;border:1px solid #ffffff14;background:#ffffff09;color:#fff;border-radius:8px;padding:7px 10px;font-size:12px}.empty{text-align:center;color:#7f8797;padding:20px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{border:1px solid var(--line);background:#ffffff04;border-radius:16px;padding:21px}.feature strong{display:block;margin-bottom:7px}.feature span{color:var(--muted);font-size:13px;line-height:1.5}
+footer{border-top:1px solid #ffffff0b;padding:35px 0 55px;color:#7f8797;font-size:13px}.footin{display:flex;justify-content:space-between;gap:20px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#f7f7f8;color:#07080c;padding:10px 15px;border-radius:9px;transition:.2s;z-index:100}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.sectionhead{align-items:stretch;gap:15px;flex-direction:column}.search{width:100%}}
+@media(max-width:600px){.navlinks{display:none}.navcta{display:none}.hero{padding:60px 0 40px}h1{letter-spacing:-2.8px}.stats{gap:15px;flex-wrap:wrap}.grid,.formgrid{grid-template-columns:1fr}.tool{min-height:175px}.footin{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav><div class="wrap navin"><div class="brand">Creator<i>Forge</i> ⚡</div><div class="navlinks"><a href="#tools">Tools</a><a href="#studio">Studio</a><a href="#why">Why CreatorForge</a></div><a class="navcta" href="#studio">Start creating</a></div></nav>
+
+<header class="hero wrap">
+<div class="badge"><span class="dot"></span> Free creator toolkit · No account required</div>
+<h1>Ideas in. <span class="grad">Content out.</span></h1>
+<p>A focused toolkit for YouTube, Shorts, gaming and social creators. Generate ideas, hooks, titles, captions, hashtags and scripts without opening ten different websites.</p>
+<div class="heroactions"><a class="btn primary" href="#tools">Explore tools ↓</a><a class="btn" href="#studio">Open Creator Studio</a></div>
+<div class="stats"><span>⚡ <b>Fast</b> results</span><span>📱 <b>Mobile-first</b></span><span>🔒 <b>No signup</b></span><span>💸 <b>Free</b> to use</span></div>
+</header>
+
+<main class="wrap">
+<section class="section" id="tools">
+<div class="sectionhead"><div><h2>Creator toolkit</h2><p>Choose a tool and get straight to work.</p></div><div class="search"><input id="search" placeholder="Search tools…"></div></div>
+<div class="grid" id="toolGrid">
+<div class="tool" data-name="ideas video idea"><div class="icon">💡</div><h3>Video Ideas</h3><p>Fresh concepts from any niche, topic or game.</p><button onclick="openTool('ideas')">Open →</button></div>
+<div class="tool" data-name="titles title youtube"><div class="icon">🎯</div><h3>Title Generator</h3><p>Multiple punchy title angles for one topic.</p><button onclick="openTool('titles')">Open →</button></div>
+<div class="tool" data-name="hooks hook shorts"><div class="icon">🪝</div><h3>Hook Generator</h3><p>Fast opening lines built to create curiosity.</p><button onclick="openTool('hooks')">Open →</button></div>
+<div class="tool" data-name="captions caption"><div class="icon">✍️</div><h3>Caption Generator</h3><p>Short captions for posts, Shorts and Reels.</p><button onclick="openTool('captions')">Open →</button></div>
+<div class="tool" data-name="hashtags hashtag"><div class="icon">#️⃣</div><h3>Hashtag Generator</h3><p>Build a focused hashtag set around your topic.</p><button onclick="openTool('hashtags')">Open →</button></div>
+<div class="tool" data-name="scripts script shorts"><div class="icon">🎬</div><h3>Shorts Script</h3><p>Hook → value → payoff → CTA in seconds.</p><button onclick="openTool('scripts')">Open →</button></div>
+<div class="tool" data-name="usernames username gaming"><div class="icon">🔤</div><h3>Username Ideas</h3><p>Creator and gaming handles from one keyword.</p><button onclick="openTool('usernames')">Open →</button></div>
+<div class="tool" data-name="revenue money calculator"><div class="icon">💰</div><h3>Revenue Calculator</h3><p>Estimate revenue from views and your RPM input.</p><button onclick="openTool('revenue')">Open →</button></div>
+</div>
+</section>
+
+<section class="section" id="studio">
+<div class="sectionhead"><div><h2 id="toolTitle">Creator Studio</h2><p id="toolDesc">Pick a tool above or start with Video Ideas.</p></div></div>
+<div class="builder"><div id="toolForm"></div><div id="results" class="results"><div class="empty">Your results will appear here.</div></div></div>
+</section>
+
+<section class="section" id="why">
+<div class="sectionhead"><div><h2>Built for the workflow</h2><p>Simple tools, useful outputs, zero clutter.</p></div></div>
+<div class="features"><div class="feature"><strong>⚡ Fast by design</strong><span>No login wall or unnecessary steps between you and your result.</span></div><div class="feature"><strong>📱 Made for phones</strong><span>The interface is designed around how creators actually work on mobile.</span></div><div class="feature"><strong>🧠 Practical outputs</strong><span>Results are formatted so you can copy them directly into your workflow.</span></div></div>
+</section>
+</main>
+
+<footer><div class="wrap footin"><span>CreatorForge © 2026</span><span>Free creator utilities. Revenue estimates are informational and actual earnings vary.</span></div></footer>
+<div class="toast" id="toast">Copied to clipboard</div>
+<script>
+const $=id=>document.getElementById(id);
+const configs={ideas:['Video Ideas','Enter a topic, niche or game.','Topic / niche','e.g. Free Fire, fitness, comedy'],titles:['Title Generator','Create multiple title angles from one topic.','Topic','e.g. M590 one tap challenge'],hooks:['Hook Generator','Create opening lines that create curiosity.','Video topic','e.g. How I improved my aim'],captions:['Caption Generator','Make short, usable social captions.','Post topic','e.g. New gaming setup'],hashtags:['Hashtag Generator','Generate a focused hashtag set.','Topic','e.g. Free Fire headshots'],scripts:['Shorts Script','Build a short-form script structure.','Topic','e.g. Why most players miss M590 shots'],usernames:['Username Ideas','Create memorable creator/gaming handles.','Keyword','e.g. Frost'],revenue:['Revenue Calculator','Enter your own RPM assumption for a transparent estimate.','Monthly views','100000']};
+let current='ideas';
+function openTool(type){current=type;let c=configs[type];$('toolTitle').textContent=c[0];$('toolDesc').textContent=c[1];
+if(type==='revenue'){$('toolForm').innerHTML=`<div class="formgrid"><div class="field"><label>Monthly views</label><input id="f1" type="number" min="0" value="100000"></div><div class="field"><label>Estimated RPM (USD)</label><input id="f2" type="number" min="0" step=".1" value="1.5"></div></div><button class="generate" onclick="generate()">Calculate estimate ⚡</button>`}
+else{$('toolForm').innerHTML=`<div class="formgrid"><div class="field wide"><label>${c[2]}</label><input id="f1" placeholder="${c[3]}"></div><div class="field"><label>Platform</label><select id="f2"><option>YouTube Shorts</option><option>YouTube Long-form</option><option>Instagram Reels</option><option>TikTok</option></select></div><div class="field"><label>Tone</label><select id="f3"><option>Catchy</option><option>Funny</option><option>Curious</option><option>Dramatic</option><option>Educational</option></select></div></div><button class="generate" onclick="generate()">Generate ⚡</button>`}
+$('results').innerHTML='<div class="empty">Your results will appear here.</div>';document.querySelector('#studio').scrollIntoView({behavior:'smooth'})}
+function generate(){if(current==='revenue'){let v=+$('f1').value||0,r=+$('f2').value||0;let m=v*r/1000;$('results').innerHTML=`<div class="result"><span>Estimated monthly revenue</span><b>$${m.toFixed(2)}</b></div><div class="result"><span>Estimated yearly revenue</span><b>$${(m*12).toFixed(2)}</b></div><div class="empty">This is a mathematical estimate based only on your inputs; actual platform RPM varies.</div>`;return}
+let t=$('f1').value.trim()||'your topic',out=[];
+if(current==='ideas')out=[`I tested ${t} so you don't have to`,`5 things nobody tells you about ${t}`,`The fastest way to improve at ${t}`,`I tried the hardest ${t} challenge`,`3 mistakes beginners make with ${t}`,`Can you beat this ${t} challenge?`];
+if(current==='titles')out=[`${t}: The Result Was INSANE`,`I Tried ${t}… Here's What Happened`,`Nobody Told Me This About ${t}`,`${t} in 60 Seconds`,`The ${t} Trick You Need to Know`,`I Wish I Knew This Before ${t}`];
+if(current==='hooks')out=[`Stop scrolling — you need to see this.`,`Most people do ${t} completely wrong.`,`I wish someone told me this sooner about ${t}.`,`You have 10 seconds to understand this.`,`Here's the easiest way to improve at ${t}.`];
+if(current==='captions')out=[`${t}, but make it unforgettable. ⚡`,`POV: you finally nailed ${t}.`,`Small move. Big result.`,`This one deserves a replay. 🔥`,`Just getting started.`];
+if(current==='hashtags'){let b=t.toLowerCase().replace(/[^a-z0-9 ]/g,'').split(' ').filter(Boolean);out=[[...new Set([...b.map(x=>'#'+x),'#shorts','#youtube','#creator','#contentcreator','#viral','#trending','#gaming'])].slice(0,15).join(' ')]}
+if(current==='scripts')out=[`HOOK: “If you're struggling with ${t}, watch this.”\n\nSETUP: Tell viewers what they will see or learn in one sentence.\n\nVALUE: Give 2–3 fast, useful points about ${t}.\n\nPAYOFF: Show the strongest result or moment.\n\nCTA: “Follow for more ${t} content.”`];
+if(current==='usernames'){let a=t.replace(/\s+/g,'');out=[a+'Forge',a+'Pulse',a+'Nova',a+'Rush',a+'Verse','Its'+a,'The'+a+'Hub',a+'X'].filter(Boolean)}
+$('results').innerHTML=out.map(x=>`<div class="result"><span>${esc(x)}</span><button class="copy" onclick="copyResult(this)">Copy</button></div>`).join('')}
+function esc(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]) )}
+function copyResult(b){navigator.clipboard?.writeText(b.parentElement.querySelector('span').innerText);$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1200)}
+$('search').addEventListener('input',e=>{let q=e.target.value.toLowerCase();document.querySelectorAll('.tool').forEach(x=>x.style.display=x.dataset.name.includes(q)?'block':'none')});
+openTool('ideas');
+</script>
+</body></html>
